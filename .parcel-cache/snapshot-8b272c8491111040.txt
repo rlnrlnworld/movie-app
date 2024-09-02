@@ -1,5 +1,5 @@
-5904
-53C:\Users\trainee101\movie-app\dist\index.af20ad6e.css133697380752246614 0
+5907
+53C:\Users\trainee101\movie-app\dist\index.af20ad6e.css133697424948064816 0
 94C:\Users\trainee101\movie-app\node_modules\csso\node_modules\css-tree\lib\syntax\node\Block.js133694543556360975 0
 65C:\Users\trainee101\movie-app\node_modules\nth-check\lib\parse.js133694543549650346 0
 63C:\Users\trainee101\movie-app\node_modules\is-extglob\README.md133694543547960923 0
@@ -58,7 +58,7 @@
 96C:\Users\trainee101\movie-app\node_modules\@swc\helpers\cjs\_object_without_properties_loose.cjs133694543554543030 0
 109C:\Users\trainee101\movie-app\node_modules\@parcel\optimizer-htmlnano\node_modules\mdn-data\css\syntaxes.json133694543551944420 0
 67C:\Users\trainee101\movie-app\node_modules\abortcontroller-polyfill133694543550855643 1
-34C:\Users\trainee101\movie-app\dist133697390125613003 1
+34C:\Users\trainee101\movie-app\dist133697424948111633 1
 77C:\Users\trainee101\movie-app\node_modules\@parcel\packager-js\lib\helpers.js133694543550553432 0
 83C:\Users\trainee101\movie-app\node_modules\@parcel\transformer-postcss\package.json133694543550306321 0
 86C:\Users\trainee101\movie-app\node_modules\caniuse-lite\data\features\link-icon-svg.js133694543561239431 0
@@ -177,7 +177,7 @@
 70C:\Users\trainee101\movie-app\node_modules\regenerator-runtime\LICENSE133694543547580703 0
 82C:\Users\trainee101\movie-app\node_modules\@swc\helpers\src\_apply_decs_2203_r.mjs133694543559330689 0
 49C:\Users\trainee101\movie-app\node_modules\base-x133694543548682252 1
-42C:\Users\trainee101\movie-app\src\main.css133697370952936847 0
+42C:\Users\trainee101\movie-app\src\main.css133697424943168932 0
 64C:\Users\trainee101\movie-app\node_modules\@parcel\optimizer-swc133694543548760332 1
 85C:\Users\trainee101\movie-app\node_modules\utility-types\dist\functional-helpers.d.ts133694543551231171 0
 59C:\Users\trainee101\movie-app\node_modules\is-json\index.js133694543548962080 0
@@ -202,7 +202,7 @@
 64C:\Users\trainee101\movie-app\node_modules\@lezer\common\LICENSE133694543547590729 0
 62C:\Users\trainee101\movie-app\node_modules\tslib\tslib.es6.mjs133694543550330890 0
 75C:\Users\trainee101\movie-app\node_modules\source-map-js\lib\source-node.js133694543550504095 0
-48C:\Users\trainee101\movie-app\src\routes\Home.js133697372195632219 0
+48C:\Users\trainee101\movie-app\src\routes\Home.js133697421142372391 0
 62C:\Users\trainee101\movie-app\node_modules\@parcel\packager-js133694543551715084 1
 77C:\Users\trainee101\movie-app\node_modules\@parcel\core\src\PackagerRunner.js133694543555720903 0
 61C:\Users\trainee101\movie-app\node_modules\csso\cjs\utils.cjs133694543553372013 0
@@ -2124,6 +2124,7 @@
 86C:\Users\trainee101\movie-app\node_modules\lmdb\node_modules\node-addon-api\napi-inl.h133694543550213473 0
 89C:\Users\trainee101\movie-app\node_modules\lmdb\node_modules\node-addon-api\noexcept.gypi133694543548952080 0
 96C:\Users\trainee101\movie-app\node_modules\@swc\helpers\_\_interop_require_wildcard\package.json133694543558383135 0
+57C:\Users\trainee101\movie-app\src\components\MovieList.js133697405816249315 0
 111C:\Users\trainee101\movie-app\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\convertTransform.js133694543551920836 0
 94C:\Users\trainee101\movie-app\node_modules\htmlnano\lib\modules\deduplicateAttributeValues.cjs133694543549827667 0
 81C:\Users\trainee101\movie-app\node_modules\@swc\helpers\esm\_iterable_to_array.js133694543556604152 0
@@ -2158,7 +2159,7 @@
 116C:\Users\trainee101\movie-app\node_modules\@parcel\transformer-react-refresh-wrap\lib\ReactRefreshWrapTransformer.js133694543549237739 0
 62C:\Users\trainee101\movie-app\node_modules\csso\lib\version.js133694543555522424 0
 56C:\Users\trainee101\movie-app\node_modules\css-tree\data133694543558383135 1
-48C:\Users\trainee101\movie-app\src\store\movie.js133697382172349151 0
+48C:\Users\trainee101\movie-app\src\store\movie.js133697423799199629 0
 74C:\Users\trainee101\movie-app\node_modules\cosmiconfig\dist\merge.d.ts.map133694543552972294 0
 76C:\Users\trainee101\movie-app\node_modules\lmdb\dependencies\lz4\lib\lz4hc.h133694543555999937 0
 100C:\Users\trainee101\movie-app\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest4.c133694543554871170 0
@@ -5895,11 +5896,13 @@
 58C:\Users\trainee101\movie-app\node_modules\.bin\semver.ps1133694543565480214 0
 56C:\Users\trainee101\movie-app\node_modules\.bin\svgo.cmd133694543565480214 0
 74C:\Users\trainee101\movie-app\node_modules\.bin\update-browserslist-db.cmd133694543565480214 0
-44C:\Users\trainee101\movie-app\src\components133697363805615128 1
+44C:\Users\trainee101\movie-app\src\components133697413286247994 1
 56C:\Users\trainee101\movie-app\src\components\Headline.js133697363286480849 0
 45C:\Users\trainee101\movie-app\dist\index.html133697362474760156 0
 54C:\Users\trainee101\movie-app\src\components\Search.js133697383724000611 0
-55C:\Users\trainee101\movie-app\dist\pavicon.7982ef25.png133697380752231578 0
-57C:\Users\trainee101\movie-app\dist\index.af20ad6e.css.map133697380752276636 0
-52C:\Users\trainee101\movie-app\dist\index.4d6bcbeb.js133697390125582667 0
-56C:\Users\trainee101\movie-app\dist\index.4d6bcbeb.js.map133697390125602557 0
+57C:\Users\trainee101\movie-app\src\components\MovieItem.js133697404082753202 0
+61C:\Users\trainee101\movie-app\src\components\MovieListMore.js133697424583137685 0
+55C:\Users\trainee101\movie-app\dist\pavicon.7982ef25.png133697421006823472 0
+52C:\Users\trainee101\movie-app\dist\index.4d6bcbeb.js133697424583466411 0
+56C:\Users\trainee101\movie-app\dist\index.4d6bcbeb.js.map133697424583479010 0
+57C:\Users\trainee101\movie-app\dist\index.af20ad6e.css.map133697424948101679 0
