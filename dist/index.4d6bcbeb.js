@@ -629,15 +629,18 @@ function routeRender(routes) {
     history.replaceState(null, "", "/#/");
     const routerView = document.querySelector("router-view");
     const [hash, queryString = ""] = location.hash.split("?");
+    //? 1. 쿼리 스트링을 객체로 변환하여 히스토리의 상태에 저장 
     const query = queryString.split("&").reduce((acc, cur)=>{
         const [key, value] = cur.split("=");
         acc[key] = value;
         return acc;
     }, {});
     history.replaceState(query, "");
+    //? 2. 현재 라우트 정보를 찾아서 렌더링
     const currentRoute = routes.find((route)=>new RegExp(`${route.path}/?$`).test(hash));
     routerView.innerHTML = "";
     routerView.append(new currentRoute.component().el);
+    //? 3. 화면 출력 후 스크롤 위치 복구
     window.scrollTo(0, 0);
 }
 function createRouter(routes) {
@@ -712,14 +715,20 @@ parcelHelpers.defineInteropFlag(exports);
 var _setup = require("../core/setup");
 var _home = require("./Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
+var _movie = require("./Movie");
+var _movieDefault = parcelHelpers.interopDefault(_movie);
 exports.default = (0, _setup.createRouter)([
     {
         path: "#/",
         component: (0, _homeDefault.default)
+    },
+    {
+        path: "#/movie",
+        component: (0, _movieDefault.default)
     }
 ]);
 
-},{"../core/setup":"7BeA3","./Home":"0JSNG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"0JSNG":[function(require,module,exports) {
+},{"../core/setup":"7BeA3","./Home":"0JSNG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Movie":"1LTyN"}],"0JSNG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _setup = require("../core/setup");
@@ -800,12 +809,14 @@ exports.default = Search;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "searchMovies", ()=>searchMovies);
+parcelHelpers.export(exports, "getMovieDetails", ()=>getMovieDetails);
 var _setup = require("../core/setup");
 const store = new (0, _setup.Store)({
     searchText: "",
     page: 1,
     pageMax: 1,
     movies: [],
+    movie: {},
     loading: false,
     message: "Search movie"
 });
@@ -834,6 +845,14 @@ const searchMovies = async (page)=>{
         console.error("searchMovies method Error: ", error);
     } finally{
         store.state.loading = false;
+    }
+};
+const getMovieDetails = async (id)=>{
+    try {
+        const res = await fetch(`https://www.omdbapi.com/?apikey=7035c60c&i=${id}&plot=full`);
+        store.state.movie = await res.json();
+    } catch (e) {
+        console.error("getMovieDetails method Error: ", e);
     }
 };
 
@@ -933,6 +952,63 @@ class MovieListMore extends (0, _setup.Component) {
 }
 exports.default = MovieListMore;
 
-},{"../core/setup":"7BeA3","../store/movie":"kq1bo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["anvqh","gLLPy"], "gLLPy", "parcelRequire6588")
+},{"../core/setup":"7BeA3","../store/movie":"kq1bo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1LTyN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _setup = require("../core/setup");
+var _movie = require("../store/movie");
+var _movieDefault = parcelHelpers.interopDefault(_movie);
+class Movie extends (0, _setup.Component) {
+    async render() {
+        //? 영화 정보 가져오기
+        await (0, _movie.getMovieDetails)(history.state.id);
+        console.log((0, _movieDefault.default).state.movie);
+        const { movie } = (0, _movieDefault.default).state;
+        this.el.classList.add("container", "the-movie");
+        this.el.innerHTML = `
+            <div 
+                class="poster" 
+                style="background-image: url(${movie.Poster})"
+            >
+            </div>
+            <div class="description">
+                <div class="title">${movie.Title}</div>
+                <div class="labels">
+                    <span>${movie.Released}</span>
+                    &nbsp;|&nbsp;
+                    <span>${movie.Runtime}</span>
+                    &nbsp;|&nbsp;
+                    <span>${movie.Country}</span>
+                </div>
+                <div class="plot">${movie.Plot}</div>
+                <div>
+                    <h3>Ratings</h3>
+                    ${movie.Ratings.map((rating)=>{
+            return `<p><span class="site"><div class="site-icon ${rating.Source}">icon</div> ${rating.Source}</span> - ${rating.Value}</p>`;
+        }).join("")}
+                </div>
+                <div>
+                    <h3>Actors</h3>
+                    <p>${movie.Actors}</p>
+                </div>
+                <div>
+                    <h3>Director</h3>
+                    <p>${movie.Director}</p>
+                </div>
+                <div>
+                    <h3>Production</h3>
+                    <p>${movie.Production}</p>
+                </div>
+                <div>
+                    <h3>Genre</h3>
+                    <p>${movie.Genre}</p>
+                </div>
+            </div>
+        `;
+    }
+}
+exports.default = Movie;
+
+},{"../core/setup":"7BeA3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../store/movie":"kq1bo"}]},["anvqh","gLLPy"], "gLLPy", "parcelRequire6588")
 
 //# sourceMappingURL=index.4d6bcbeb.js.map

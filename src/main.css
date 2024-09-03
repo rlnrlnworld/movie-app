@@ -1,5 +1,5 @@
+/* Color Palette */
 html {
-    /* 컬러 변수 설정 */
     --color-black: #0E111B;
     --color-white: #fff;
     --color-white-50: rgba(255,255,255,0.5);
@@ -11,6 +11,7 @@ html {
     --color-hover: #f86a05;
     --color-area: #1c212e;
 }
+/* Common */
 body {
     background-color: var(--color-black);
     font-family: "Roboto", sans-serif;
@@ -68,6 +69,7 @@ body {
     padding: 40px 0;
 }
 
+/* Site Title */
 .headline {
     margin-bottom: 40px;
 }
@@ -84,6 +86,7 @@ body {
     color: var(--color-white-30)
 }
 
+/* Search Input */
 .search {
     display: flex;
     gap: 10px;
@@ -108,6 +111,7 @@ body {
     max-width: 150px;
 }
 
+/* MovieList */
 .movie-list {
     padding: 20px;
     border-radius: 4px;
@@ -173,3 +177,65 @@ body {
     display: none;
 }
 
+/* Movie */
+.the-movie {
+    color: var(--color-white-50);
+    display: flex;
+    gap: 70px;
+}
+.the-movie .poster {
+    flex-shrink: 0;
+    --width: 500px;
+    width: var(--width);
+    height: calc(var(--width) * 3 / 2);
+    border-radius: 10px;
+    background-size: cover;
+    background-color: var(--color-area);
+}
+.the-movie .description {
+    flex-grow: 1;
+}
+.description .title {
+    font-size: 70px;
+    font-family: "Oswald", sans-serif;
+    line-height: 1;
+    color: var(--color-white);
+    margin-bottom: 30px;
+}
+.description .labels span{
+    font-family: "Roboto", sans-serif;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+.the-movie .plot {
+    /* skeleton UI */
+    font-size: 14px;
+}
+.the-movie .site{
+    font-family: "Oswald", sans-serif;
+}
+.site-icon {
+    display:inline-block;
+    width: 17px;           /* 아이콘의 너비 */
+    height: 17px;          /* 아이콘의 높이 */
+    background-size: cover; /* 아이콘이 요소를 완전히 채우도록 설정 */
+    background-position: center; /* 아이콘이 요소의 가운데에 위치하도록 설정 */
+    margin-right: 8px;     /* 텍스트와 아이콘 사이의 간격 */
+    vertical-align: middle; 
+    color: transparent;
+}
+.site-icon.Internet.Movie.Database {
+    background-image: url(https://m.media-amazon.com/images/M/MV5BOTc2YzQ0NDctMzViZi00YjNkLWIxODktZDFjYTg5ZDI3YjhjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg);
+}
+.site-icon.Metacritic {
+    background-image: url(https://play-lh.googleusercontent.com/Mp_32pK1zEZMjw1RZZsiEE_pjGKArdykWzi9H-82n7IKIXvbgSDSqWHHdhEPtiBVLA);
+}
+.site-icon.Rotten.Tomatoes {
+    background-image: url(https://yt3.googleusercontent.com/ytc/AIdro_lu_2dewkGiITum97t_8qF9ZAzjRRYqxqWYLfaeMy_1Oh5Q=s900-c-k-c0x00ffffff-no-rj);
+}
+.the-movie h3 {
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    color: var(--color-white);
+    margin: 24px 0 6px;
+}

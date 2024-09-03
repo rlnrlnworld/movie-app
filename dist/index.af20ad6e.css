@@ -191,4 +191,76 @@ body {
 .view-more.hide {
   display: none;
 }
+
+.the-movie {
+  color: var(--color-white-50);
+  gap: 70px;
+  display: flex;
+}
+
+.the-movie .poster {
+  --width: 500px;
+  width: var(--width);
+  height: calc(var(--width) * 3 / 2);
+  background-size: cover;
+  background-color: var(--color-area);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.the-movie .description {
+  flex-grow: 1;
+}
+
+.description .title {
+  color: var(--color-white);
+  margin-bottom: 30px;
+  font-family: Oswald, sans-serif;
+  font-size: 70px;
+  line-height: 1;
+}
+
+.description .labels span {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  font-family: Roboto, sans-serif;
+}
+
+.the-movie .plot {
+  font-size: 14px;
+}
+
+.the-movie .site {
+  font-family: Oswald, sans-serif;
+}
+
+.site-icon {
+  vertical-align: middle;
+  color: #0000;
+  background-position: center;
+  background-size: cover;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.site-icon.Internet.Movie.Database {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BOTc2YzQ0NDctMzViZi00YjNkLWIxODktZDFjYTg5ZDI3YjhjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg");
+}
+
+.site-icon.Metacritic {
+  background-image: url("https://play-lh.googleusercontent.com/Mp_32pK1zEZMjw1RZZsiEE_pjGKArdykWzi9H-82n7IKIXvbgSDSqWHHdhEPtiBVLA");
+}
+
+.site-icon.Rotten.Tomatoes {
+  background-image: url("https://yt3.googleusercontent.com/ytc/AIdro_lu_2dewkGiITum97t_8qF9ZAzjRRYqxqWYLfaeMy_1Oh5Q=s900-c-k-c0x00ffffff-no-rj");
+}
+
+.the-movie h3 {
+  color: var(--color-white);
+  margin: 24px 0 6px;
+  font-family: Oswald, sans-serif;
+  font-size: 20px;
+}
 /*# sourceMappingURL=index.af20ad6e.css.map */
