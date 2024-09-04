@@ -63,6 +63,32 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+/* Skeleton */
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color-area);
+}
+.skleton::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(270deg,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0));
+    transform: translateX(-100%);
+    animation: skeleton-loader 2s infinite;
+}
+@keyframes skeleton-loader {
+    0% { transform: translateX(-100%) }
+    100% { transform: translateX(100%) }
+}
+
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -202,14 +228,24 @@ body {
     color: var(--color-white);
     margin-bottom: 30px;
 }
+.description .title.skeleton {
+    height: 70px;
+}
 .description .labels span{
     font-family: "Roboto", sans-serif;
     color: var(--color-primary);
     margin-bottom: 20px;
 }
-.the-movie .plot {
+.description .labels.skeleton{
+    height: 30px;
+}
+/* .the-movie .plot {
     /* skeleton UI */
-    font-size: 14px;
+    /* font-size: 14px;} */
+
+.the-movie .plot.skeleton {
+    width: 88%;
+    height: 400px;
 }
 .the-movie .site{
     font-family: "Oswald", sans-serif;

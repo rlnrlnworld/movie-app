@@ -3,13 +3,23 @@ import movieStore, { getMovieDetails } from '../store/movie'
 
 export default class Movie extends Component {
     async render() {
+        this.el.classList.add('container','the-movie')
+        //? Skeleton loading animation
+        this.el.innerHTML = `
+            <div class="poster skeleton"></div>
+            <div class="description">
+                <div class="title skeleton"></div>
+                <div class="labels skeleton"></div>
+                <div class="plot skeleton"></div>
+            </div>
+        ` 
+
         //? 영화 정보 가져오기
         await getMovieDetails(history.state.id)
         console.log(movieStore.state.movie)
         const { movie } = movieStore.state
         const bigPoster = movie.Poster.replace('SX300','SX700')
 
-        this.el.classList.add('container','the-movie')
         this.el.innerHTML = `
             <div 
                 class="poster" 

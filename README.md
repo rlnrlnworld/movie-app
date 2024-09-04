@@ -11,9 +11,9 @@ https://www.jsdelivr.com/package/npm/reset-css
 
 ## 색상 팔레트
 **배경** : #0E111B \
-**기본** : #fff \
+**기본** : #FFFFFF \
 **포인트** : #FDC000 \
-**hover** : #f86a05
+**hover** : #F86A05
 
 # API
 **OMDb** : https://www.omdbapi.com/
