@@ -7,12 +7,13 @@ export default class Movie extends Component {
         await getMovieDetails(history.state.id)
         console.log(movieStore.state.movie)
         const { movie } = movieStore.state
+        const bigPoster = movie.Poster.replace('SX300','SX700')
 
         this.el.classList.add('container','the-movie')
         this.el.innerHTML = `
             <div 
                 class="poster" 
-                style="background-image: url(${movie.Poster})"
+                style="background-image: url(${bigPoster})"
             >
             </div>
             <div class="description">
