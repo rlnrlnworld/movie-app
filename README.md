@@ -1,6 +1,6 @@
 <img src="https://i.imgur.com/ZBnFGAG.png" width=100%>
 
-# 🎞️ OMDBapi Movie Search
+# 🎞️ [OMDBapi Movie Search](movie-app-drab-six.vercel.app)
 외부 API를 활용하여 영화를 검색하고 결과를 화면에 표시합니다.
 
 ## ✨ 기능
