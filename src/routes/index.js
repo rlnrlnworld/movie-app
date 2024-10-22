@@ -1,8 +1,12 @@
-import { Component, createRouter } from '../core/setup'
+import { createRouter } from '../core/setup'
 import Home from './Home'
 import Movie from './Movie'
+import About from './About'
+import NotFound from './NotFound'
 
 export default createRouter([
-    { path: '#/', component: Home },
-    { path: '#/movie', component: Movie }
+  { path: '#/', component: Home },
+  { path: '#/movie', component: Movie },
+  { path: '#/about', component: About },
+  { path: '.*', component: NotFound } // '.*' === '.{0,}'
 ])
