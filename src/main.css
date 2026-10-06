@@ -352,13 +352,13 @@ header {
     color: transparent;
 }
 .site-icon.Internet.Movie.Database {
-    background-image: url(https://m.media-amazon.com/images/M/MV5BOTc2YzQ0NDctMzViZi00YjNkLWIxODktZDFjYTg5ZDI3YjhjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg);
+    background-image: url(./img/rating-imdb.webp);
 }
 .site-icon.Metacritic {
-    background-image: url(https://play-lh.googleusercontent.com/Mp_32pK1zEZMjw1RZZsiEE_pjGKArdykWzi9H-82n7IKIXvbgSDSqWHHdhEPtiBVLA);
+    background-image: url(./img/rating-metacritic.webp);
 }
 .site-icon.Rotten.Tomatoes {
-    background-image: url(https://yt3.googleusercontent.com/ytc/AIdro_lu_2dewkGiITum97t_8qF9ZAzjRRYqxqWYLfaeMy_1Oh5Q=s900-c-k-c0x00ffffff-no-rj);
+    background-image: url(./img/rating-rotten.webp);
 }
 /* Ratings (지연 로드) */
 .the-movie .rating-row {
