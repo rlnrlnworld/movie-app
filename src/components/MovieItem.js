@@ -11,18 +11,22 @@ export default class MovieItem extends Component {
         const { movie } = this.props
         
         //! 경로 명시 속성 설정 메소드
-        this.el.setAttribute('href', `#/movie?id=${movie.imdbID}`)
+        this.el.setAttribute('href', `#/movie?id=${movie.id}`)
         this.el.classList.add('movie')
-        this.el.style.backgroundImage = `url(${movie.Poster})`
+        if (movie.poster) {
+            this.el.style.backgroundImage = `url(${movie.poster})`
+        } else {
+            this.el.classList.add('no-poster')
+        }
     
         // 화면에 출력
         this.el.innerHTML = `
             <div class="info">
                 <div class="year">
-                    ${movie.Year}
+                    ${movie.year}
                 </div>
                 <div class="title">
-                    ${movie.Title}
+                    ${movie.title}
                 </div>
             </div>
         `

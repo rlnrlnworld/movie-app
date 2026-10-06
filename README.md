@@ -1,12 +1,24 @@
 <img src="https://i.imgur.com/ZBnFGAG.png" width=100%>
 
-# 🎞️ [OMDBapi Movie Search](https://vercel.live/link/movie-app-drab-six.vercel.app?via=deployment-domains-list&p=1&page=/)
+# 🎞️ [TMDB Movie Search](https://vercel.live/link/movie-app-drab-six.vercel.app?via=deployment-domains-list&p=1&page=/)
 외부 API를 활용하여 영화를 검색하고 결과를 화면에 표시합니다.
 
 ## ✨ 기능
-- 외부 API를 이용한 영화 검색
-- 제목, 포스터, 개봉 날짜, 줄거리 등 영화 상세 정보 표시
+- TMDB API 기반 영화 검색 (한국어 제목·줄거리 지원)
+- 제목, 포스터, 개봉 날짜, 줄거리, 출연진, 감독 등 영화 상세 정보 표시
+- IMDb · Rotten Tomatoes · Metacritic 평점 (OMDb API) — 상세 정보 먼저 표시 후 평점은 스켈레톤 UI로 지연 로드
+- Vercel 서버리스 함수에서 API 키 보호 + CDN 캐시(`s-maxage=86400`)로 외부 API 호출 최소화
 - 데스크톱 및 모바일 기기 모두에 대응하는 반응형 디자인
+
+## 🔑 환경 변수
+Vercel 프로젝트(또는 로컬 `.env`)에 아래 두 값을 등록합니다.
+
+| 변수 | 용도 | 발급 |
+| --- | --- | --- |
+| `TMDB_APIKEY` | 영화 검색·상세 (API Key v3 auth) | https://www.themoviedb.org/settings/api |
+| `APIKEY` | OMDb 평점 | https://www.omdbapi.com/apikey.aspx |
+
+> This product uses the TMDB API but is not endorsed or certified by TMDB.
 
 ## 🛠 기술 스택
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"><img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white">
@@ -66,7 +78,9 @@
 │  │  ├─ icon_Internet Movie Database.png
 │  │  ├─ icon_Metacritic.png
 │  │  ├─ icon_Rotten Tomatoes.png
-│  │  └─ pavicon.png
+│  │  ├─ apple-touch-icon.png
+│  │  ├─ favicon.ico
+│  │  └─ favicon.png
 │  ├─ main.css
 │  ├─ main.js
 │  ├─ 📁 routes

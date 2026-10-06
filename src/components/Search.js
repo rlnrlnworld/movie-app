@@ -9,7 +9,7 @@ export default class Search extends Component {
     this.el.innerHTML = /* html */ `
       <input 
         value="${movieStore.state.searchText}"
-        placeholder="Enter the movie title to search!" />
+        placeholder="영화 제목을 입력하세요 (한국어 검색 가능)" />
       <button class="btn btn-primary">
         Search!
       </button>

@@ -5,14 +5,13 @@ export default class Headline extends Component {
         this.el.classList.add('headline')
         this.el.innerHTML = `
             <h1>
-                <span>OMDb API</span><br>
-                THE OPEN<br>
-                MOVIE DATABASE
+                <span>TMDB API</span><br>
+                THE MOVIE<br>
+                DATABASE
             </h1>
             <p>
-                The OMDb API is a RESTful web service to obtain movie information,<br> 
-                all content and images on the site are contributed and maintained by our users.<br>
-                If you find this service useful, please consider making a one-time donation or become a patron.
+                한국어로 영화를 검색하고 줄거리, 출연진, 평점을 한눈에 확인하세요.<br>
+                영화 정보와 포스터는 TMDB, 평점은 IMDb · Rotten Tomatoes · Metacritic(OMDb) 데이터를 사용합니다.
             </p>
         `
     }

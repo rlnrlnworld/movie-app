@@ -70,7 +70,7 @@ body {
     border-radius: 10px;
     background-color: var(--color-area);
 }
-.skleton::after{
+.skeleton::after{
     content: "";
     width: 100%;
     height: 100%;
@@ -188,6 +188,10 @@ header {
   footer a:hover {
     text-decoration: underline;
   }
+  footer .attribution {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
   
 
 /* Search Input */
@@ -281,6 +285,15 @@ header {
     display: none;
 }
 
+/* Poster fallback (TMDB에 포스터 없는 경우) */
+.no-poster {
+    background-image: url(./img/favicon.png);
+    background-size: 50% !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-area);
+}
+
 /* Movie */
 .the-movie {
     color: var(--color-white-50);
@@ -346,6 +359,33 @@ header {
 }
 .site-icon.Rotten.Tomatoes {
     background-image: url(https://yt3.googleusercontent.com/ytc/AIdro_lu_2dewkGiITum97t_8qF9ZAzjRRYqxqWYLfaeMy_1Oh5Q=s900-c-k-c0x00ffffff-no-rj);
+}
+/* Ratings (지연 로드) */
+.the-movie .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 24px;
+    margin-bottom: 4px;
+}
+.the-movie .rating-row .site {
+    display: inline-flex;
+    align-items: center;
+}
+.the-movie .site-icon.skeleton {
+    border-radius: 4px;
+    margin-right: 0;
+}
+.the-movie .rating-text.skeleton {
+    display: inline-block;
+    width: 180px;
+    height: 14px;
+    border-radius: 4px;
+}
+.the-movie .rating-row:nth-child(2) .rating-text.skeleton { width: 140px; }
+.the-movie .rating-row:nth-child(3) .rating-text.skeleton { width: 110px; }
+.the-movie .rating-empty {
+    color: var(--color-white-30);
 }
 .the-movie h3 {
     font-size: 20px;
