@@ -10,7 +10,7 @@ export default class Headline extends Component {
                 CHECK THE SCORE.
             </h1>
             <p>
-                한국어로 영화를 검색하고 줄거리, 출연진, 평점을 한눈에 확인하세요.<br>
+                영화를 검색하고 줄거리, 출연진, 평점을 한눈에 확인하세요.<br>
                 IMDb · Rotten Tomatoes · Metacritic 평점을 함께 보여드립니다.
             </p>
         `
