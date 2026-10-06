@@ -30,7 +30,7 @@ export default class TheHeader extends Component {
       <a
         href="#/"
         class="logo">
-        <span>Movie</span> DB
+        <span>Movie</span> Database
       </a>
       <nav>
         <ul>
