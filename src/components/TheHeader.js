@@ -12,7 +12,7 @@ export default class TheHeader extends Component {
           },
           {
             name: 'Movie',
-            href: '#/movie?id=tt4520988'
+            href: '#/movie?id=330457' // 겨울왕국 2 (TMDB id)
           },
           {
             name: 'About',
@@ -30,7 +30,7 @@ export default class TheHeader extends Component {
       <a
         href="#/"
         class="logo">
-        <span>OMDbAPI</span>.COM
+        <span>Movie</span> DB
       </a>
       <nav>
         <ul>

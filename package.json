@@ -6,7 +6,7 @@
   },
   "scripts": {
     "dev": "parcel ./index.html",
-    "build": "parcel build ./index.html",
+    "build": "parcel build ./index.html && cp -R static/. dist/",
     "vercel": "vercel dev"
   },
   "keywords": [],
@@ -14,6 +14,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-jsonld": "^2.12.0",
     "dotenv": "^16.4.5",
     "parcel": "^2.12.0",
     "vercel": "^37.4.1"
