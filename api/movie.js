@@ -1,5 +1,6 @@
 // TMDB 프록시 — 검색(title, page) / 상세(id). 응답은 프론트에서 바로 쓰는 형태로 정규화한다.
-const { TMDB_APIKEY } = process.env
+// TMDB_TOKEN: TMDB 설정 > API 의 "API Read Access Token" (eyJ... 로 시작하는 JWT)
+const { TMDB_TOKEN } = process.env
 const TMDB = 'https://api.themoviedb.org/3'
 const IMG = 'https://image.tmdb.org/t/p'
 const LANG = 'ko-KR'
@@ -12,8 +13,13 @@ const year = date => (date ? date.slice(0, 4) : '')
 
 async function tmdb(path, params = {}) {
   const url = new URL(`${TMDB}${path}`)
-  url.search = new URLSearchParams({ api_key: TMDB_APIKEY, language: LANG, ...params })
-  const res = await fetch(url)
+  url.search = new URLSearchParams({ language: LANG, ...params })
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${TMDB_TOKEN}`,
+      accept: 'application/json'
+    }
+  })
   const json = await res.json()
   if (!res.ok || json.success === false) {
     throw new Error(json.status_message || `TMDB ${res.status}`)

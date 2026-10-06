@@ -15,7 +15,7 @@ Vercel 프로젝트(또는 로컬 `.env`)에 아래 두 값을 등록합니다.
 
 | 변수 | 용도 | 발급 |
 | --- | --- | --- |
-| `TMDB_APIKEY` | 영화 검색·상세 (API Key v3 auth) | https://www.themoviedb.org/settings/api |
+| `TMDB_TOKEN` | 영화 검색·상세 — **API Read Access Token** (`eyJ...` JWT) | https://www.themoviedb.org/settings/api |
 | `APIKEY` | OMDb 평점 | https://www.omdbapi.com/apikey.aspx |
 
 > This product uses the TMDB API but is not endorsed or certified by TMDB.
